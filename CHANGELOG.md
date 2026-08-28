@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-28 (5)
+
+- Added an About section (id `about`, in-page — no separate route) between
+  the project grid and footer: what the log is, plus a one-line "who's
+  behind it". `about the site` CTA and the nav `about` link now scroll to it
+  instead of pointing nowhere.
+- Replaced "kept simple, kept honest" with "it is what it is" everywhere it
+  appeared (hero subhead, meta description, About section).
+
 ## 2026-08-28 (4)
 
 - Removed the `contact` nav link by design — the site isn't meant to be a

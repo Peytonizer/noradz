@@ -256,6 +256,36 @@ a {
   color: var(--text-muted);
 }
 
+/* ---------- About ---------- */
+
+.about {
+  padding: 100px 72px;
+  border-top: 1px solid var(--border);
+}
+
+.about-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-faint);
+  margin: 0 0 32px;
+}
+
+.about-lead {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 0 16px;
+}
+
+.about-byline {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-dim);
+  margin: 0;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
