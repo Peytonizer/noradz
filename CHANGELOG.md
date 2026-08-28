@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-08-28 (9)
+
+- Added `favicon.svg` (the nav's razor mark) and linked it in `<head>` —
+  browser tab now shows the brand mark instead of a generic icon.
+- Removed "— does what it says on the tin" from the About lead sentence
+  (kept on the hero subhead and meta description).
+- Removed the "© noradz" copyright line from the footer; the `nothing here
+  is spilled` line now stands alone. Dropped the now-unused `.copyright`
+  CSS rule.
+
 ## 2026-08-28 (8)
 
 - Private-repo badge: "unspilled" -> "classified" (dropped the unexplained

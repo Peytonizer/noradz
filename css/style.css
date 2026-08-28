@@ -305,13 +305,6 @@ a {
   margin: 0;
 }
 
-.copyright {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-faintest);
-  margin: 0;
-}
-
 /* ---------- Responsive ----------
    Not covered by the spec (1440px desktop only) — breakpoints below
    are a build-time decision, chosen to keep the same visual rhythm
