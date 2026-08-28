@@ -24,7 +24,8 @@ python3 -m http.server 8000
 
 ## Status
 
-Live at https://peytonizer.github.io/noradz/ (GitHub Pages, deployed from `main`).
+**v1.0.0 — released.** Live at https://noradz.io and https://www.noradz.io (GitHub Pages,
+deployed from `main`, custom domain with a GitHub-managed HTTPS cert).
 
 Project cards show real projects (Torn Battlecards, Strata Bot, Aristaeus). No `contact` link
 by design — this isn't meant to be a contact channel. `work` and `about` are in-page anchors

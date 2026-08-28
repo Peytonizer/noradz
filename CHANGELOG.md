@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.0 — 2026-08-28
+
+First public release, tagged and shipped to https://noradz.io and
+https://www.noradz.io. Everything below this line is what shipped in it.
+
 ## 2026-08-28 (9)
 
 - Added `favicon.svg` (the nav's razor mark) and linked it in `<head>` —
