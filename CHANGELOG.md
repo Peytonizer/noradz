@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-28 (7)
+
+- About lead: "A running list of the AI stuff that's actually shipped" -> "A
+  record of AI builds that made it out the door".
+
 ## 2026-08-28 (6)
 
 - Tagline: "it is what it is" -> "does what it says on the tin" (hero subhead,
