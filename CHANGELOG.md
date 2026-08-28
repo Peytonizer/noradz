@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-28 (10)
+
+- Added `IDEAS.md` — a blue-sky backlog for the site's future (detail pages,
+  a build log, `projects.json`-driven rendering, AI-native ideas, polish).
+  Kept out of `noradz-site-spec.md` deliberately: the spec stays the frozen
+  v1 build record, so speculative work needed its own home.
+
 ## v1.0.0 — 2026-08-28
 
 First public release, tagged and shipped to https://noradz.io and
