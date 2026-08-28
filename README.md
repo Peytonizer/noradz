@@ -24,7 +24,9 @@ python3 -m http.server 8000
 
 ## Status
 
-The three project cards on the page are placeholders (`[Project Alpha/Beta/Gamma]`) — real
-project content still needs to go in before this ships. See "Open decisions for the build" in
-the spec for what's still undecided (mobile breakpoints, real project count, link
-destinations for `work` / `about` / `contact`).
+Live at https://peytonizer.github.io/noradz/ (GitHub Pages, deployed from `main`).
+
+Project cards show real projects (Torn Battlecards, Strata Bot, Aristaeus). Still open, per
+the spec's "Open decisions for the build": `work` / `about` / `contact` nav links and the
+"about the site" CTA have no destination yet, and mobile/tablet breakpoints are a build-time
+addition (the spec only covers the 1440px desktop mockup).

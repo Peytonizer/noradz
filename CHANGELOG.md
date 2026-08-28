@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-28 (2)
+
+- Enabled GitHub Pages (deploy from `main`, root) — live at
+  https://peytonizer.github.io/noradz/
+- Replaced the three placeholder project cards with real projects, pulled from
+  each repo's README: Torn Battlecards, Strata Bot, Aristaeus. Categories and
+  tags were picked to describe each project's actual nature rather than reused
+  from the placeholder mockup.
+
 ## 2026-08-28
 
 - Scaffolded the site from `noradz-site-spec.md`: nav, hero, 3-up project grid (placeholder
