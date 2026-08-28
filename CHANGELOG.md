@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-28 (4)
+
+- Removed the `contact` nav link by design — the site isn't meant to be a
+  contact channel.
+
 ## 2026-08-28 (3)
 
 - Set up the custom domain: `noradz.io` as primary (CNAME committed, Pages API

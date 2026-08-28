@@ -26,7 +26,7 @@ python3 -m http.server 8000
 
 Live at https://peytonizer.github.io/noradz/ (GitHub Pages, deployed from `main`).
 
-Project cards show real projects (Torn Battlecards, Strata Bot, Aristaeus). Still open, per
-the spec's "Open decisions for the build": `work` / `about` / `contact` nav links and the
-"about the site" CTA have no destination yet, and mobile/tablet breakpoints are a build-time
-addition (the spec only covers the 1440px desktop mockup).
+Project cards show real projects (Torn Battlecards, Strata Bot, Aristaeus). No `contact` link
+by design — this isn't meant to be a contact channel. Still open: `work`/`about` nav links and
+the "about the site" CTA have no destination yet, and mobile/tablet breakpoints are a
+build-time addition (the spec only covers the 1440px desktop mockup).
