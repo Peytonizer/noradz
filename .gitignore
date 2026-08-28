@@ -1,2 +1,9 @@
 .env
 .DS_Store
+
+# Internal working docs — real copies live in the private workbench repo.
+# Also covered by the global ignore, but kept here so the rule travels with the repo.
+CLAUDE.local.md
+CLAUDE.md
+IDEAS.md
+noradz-site-spec.md

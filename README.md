@@ -2,11 +2,11 @@
 
 Personal landing page for the noradz domain — collates and showcases Matt's AI projects.
 
-Built from [`noradz-site-spec.md`](./noradz-site-spec.md) in the "Signal" direction (red/black,
-techy). Plain static HTML/CSS, no build step, no framework — deployed via GitHub Pages.
+Built to a "Signal" design direction (red/black, techy). Plain static HTML/CSS, no build
+step, no framework — deployed via GitHub Pages.
 
-Future directions live in [`IDEAS.md`](./IDEAS.md) — a speculative backlog, kept out of the
-spec so the spec stays a frozen record of what v1 actually shipped.
+The build spec and the forward-looking idea backlog are kept in a private repo rather than
+here, so this repo stays the published site and nothing else.
 
 ## Structure
 

@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-08-29
+
+- Moved the internal working documents out of this public repo and into a private
+  `workbench` repo: the agent instructions (`CLAUDE.md`), the idea backlog
+  (`IDEAS.md`) and the v1 build spec (`noradz-site-spec.md`). This repo is now the
+  published site, its docs and the ledger tooling — nothing else.
+- Agent instructions still load, via a gitignored `CLAUDE.local.md` at the root that
+  imports the real file from the private repo. `CLAUDE.local.md` is the mechanism
+  Claude Code provides for private per-project instructions, so no symlinks are needed.
+- Ignored in two places on purpose: a global ignore makes new projects private by
+  default, and the entries in this repo's `.gitignore` make the rule explicit and
+  portable rather than depending on invisible machine state.
+- History deliberately not rewritten — the files remain in earlier commits. They are a
+  style guide, a roadmap and a design spec, so the exposure isn't worth a force push
+  that breaks clones and existing checkouts.
+- README no longer links to the two moved files.
+
 ## 2026-08-28 (12)
 
 - Dropped the wall-clock hours column from the ledger. It measured elapsed time
