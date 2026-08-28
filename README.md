@@ -11,9 +11,44 @@ spec so the spec stays a frozen record of what v1 actually shipped.
 ## Structure
 
 ```
-index.html      page markup
-css/style.css   all styling (colour tokens, type, layout, responsive rules)
+index.html               page markup
+css/style.css            all styling (colour tokens, type, layout, responsive rules)
+data/ledger.json         generated build-ledger data (committed — see below)
+tools/build_ledger.py    generates data/ledger.json from Claude Code transcripts
+tools/ledger-projects.json  which transcript directories belong to which project
 ```
+
+## Build ledger
+
+An honest record of how much AI work went into each project: sessions, prompts typed,
+tokens, API-equivalent cost, lines changed.
+
+Claude Code keeps a JSONL transcript of every session under
+`~/.claude/projects/<slugified-cwd>/`. Nothing is lost when a session ends — `/clear`
+starts a new transcript rather than deleting the old one — so those files are a complete
+local history of how each project was built. `tools/build_ledger.py` reduces them to
+per-project aggregates:
+
+```sh
+python3 tools/build_ledger.py --print
+```
+
+Three things about it worth knowing:
+
+- **It has to run locally and its output is committed.** GitHub Actions can't see
+  `~/.claude`, so this can't be a CI step. `data/ledger.json` is committed deliberately —
+  it's the durable snapshot. Transcripts live only on the machine that produced them and
+  could be pruned or lost, at which point the committed JSON is the only remaining record.
+- **Only aggregates leave the transcripts.** They contain full prompt text, file contents
+  and command output, so the script emits nothing but counts, totals and dates. Never
+  publish the transcripts themselves.
+- **Costs are API-equivalent list prices, not what was paid.** Newer sessions carry a cost
+  Claude Code worked out itself; sessions predating that are priced from token counts using
+  the table in the script, and are flagged with `estimated_cost_sessions`. On a
+  subscription plan neither figure is money that changed hands — the site should say so
+  wherever these numbers are shown.
+
+Adding a project means adding an entry to `tools/ledger-projects.json` and re-running.
 
 ## Run locally
 

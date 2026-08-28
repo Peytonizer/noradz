@@ -1,0 +1,117 @@
+{
+  "generated": "2026-08-28T13:47:33+00:00",
+  "notes": [
+    "Costs are the API-equivalent list price of the tokens used. On a subscription plan that is not the amount actually paid.",
+    "Sessions counted in estimated_cost_sessions predate Claude Code recording its own cost; those figures are priced from token counts by this script.",
+    "wall_hours is elapsed session time, not time spent generating."
+  ],
+  "totals": {
+    "projects": 4,
+    "sessions": 15,
+    "human_turns": 100,
+    "cost_usd": 49.11,
+    "lines_added": 4519,
+    "lines_removed": 552,
+    "wall_hours": 58.6
+  },
+  "projects": [
+    {
+      "slug": "noradz",
+      "name": "Noradz",
+      "sessions": 3,
+      "human_turns": 22,
+      "cost_usd": 7.52,
+      "estimated_cost_sessions": 1,
+      "tokens": {
+        "input": 7076,
+        "output": 98618,
+        "cache_read": 18925099,
+        "cache_creation": 294428
+      },
+      "lines_added": 817,
+      "lines_removed": 98,
+      "wall_hours": 2.2,
+      "models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5",
+        "claude-sonnet-5"
+      ],
+      "first_session": "2026-08-28T11:37:34.005Z",
+      "last_session": "2026-08-28T13:47:31.190Z",
+      "unpriced_models": []
+    },
+    {
+      "slug": "torn-battlecards",
+      "name": "Torn Battlecards",
+      "sessions": 6,
+      "human_turns": 35,
+      "cost_usd": 20.71,
+      "estimated_cost_sessions": 0,
+      "tokens": {
+        "input": 24514,
+        "output": 364221,
+        "cache_read": 63828603,
+        "cache_creation": 1098730
+      },
+      "lines_added": 1693,
+      "lines_removed": 281,
+      "wall_hours": 9.3,
+      "models": [
+        "<synthetic>",
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "first_session": "2026-08-26T11:18:09.681Z",
+      "last_session": "2026-08-28T08:45:58.871Z",
+      "unpriced_models": []
+    },
+    {
+      "slug": "strata-bot",
+      "name": "Strata Bot",
+      "sessions": 1,
+      "human_turns": 4,
+      "cost_usd": 7.52,
+      "estimated_cost_sessions": 0,
+      "tokens": {
+        "input": 57886,
+        "output": 162879,
+        "cache_read": 23905686,
+        "cache_creation": 263483
+      },
+      "lines_added": 1196,
+      "lines_removed": 73,
+      "wall_hours": 20.8,
+      "models": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "first_session": "2026-08-27T10:51:22.255Z",
+      "last_session": "2026-08-27T12:10:45.787Z",
+      "unpriced_models": []
+    },
+    {
+      "slug": "aristaeus",
+      "name": "Aristaeus",
+      "sessions": 5,
+      "human_turns": 39,
+      "cost_usd": 13.36,
+      "estimated_cost_sessions": 3,
+      "tokens": {
+        "input": 2620,
+        "output": 215525,
+        "cache_read": 41982144,
+        "cache_creation": 700875
+      },
+      "lines_added": 813,
+      "lines_removed": 100,
+      "wall_hours": 26.3,
+      "models": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "first_session": "2026-08-25T08:27:09.442Z",
+      "last_session": "2026-08-26T10:35:36.751Z",
+      "unpriced_models": []
+    }
+  ]
+}

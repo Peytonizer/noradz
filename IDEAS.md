@@ -75,9 +75,17 @@ Right now every project card is hand-written HTML. That's fine at three and pain
 A site about building things with AI should be visibly built with AI. These are the ideas
 that would make it more than a generic project index.
 
-- **A build ledger per project.** Which model built it, roughly how many sessions, rough
-  token cost, how much was hand-edited afterwards. Almost nobody publishes this and it's the
-  most genuinely interesting data this site is sitting on. Fits the "kept honest" line exactly.
+- **A build ledger per project.** Which model built it, how many sessions, how many prompts,
+  token cost, lines changed. Almost nobody publishes this and it's the most genuinely
+  interesting data this site is sitting on. Fits the "kept honest" line exactly.
+  **The data side is built** — `tools/build_ledger.py` generates `data/ledger.json` from the
+  local Claude Code transcripts (see README). What's left is rendering it: a ledger row on
+  each project card or detail page, and a site-wide totals line. Open question worth
+  settling before it ships — how much to show. The full table is more honest; a single
+  "$X and N prompts to build this" line per project is more readable.
+- **A "hand-edited afterwards" figure** to sit alongside the ledger. The transcripts record
+  what Claude changed; git records everything that changed. The gap between them is the
+  most interesting number of the lot, and it isn't computed yet.
 - **Publish the specs.** `noradz-site-spec.md` produced this site; other projects have
   equivalents. Shipping the spec next to the thing it produced ("here's the prompt that
   built this") is a real artefact, not a gimmick.

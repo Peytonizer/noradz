@@ -1,0 +1,35 @@
+{
+  "_comment": [
+    "Maps each project on the site to the Claude Code transcript directories that",
+    "produced it. Claude Code stores one .jsonl per session under",
+    "~/.claude/projects/<slugified-cwd>/, so the slug is the working directory with",
+    "'/' replaced by '-'. A project built from more than one directory (renamed repo,",
+    "work done from a parent dir) lists several. Add a project here and re-run",
+    "tools/build_ledger.py to include it in the ledger.",
+    "",
+    "'since' is optional (ISO date) and drops sessions before it — useful when a",
+    "directory was reused for something unrelated beforehand."
+  ],
+  "projects": [
+    {
+      "slug": "noradz",
+      "name": "Noradz",
+      "transcript_dirs": ["-Users-matt-git-noradz"]
+    },
+    {
+      "slug": "torn-battlecards",
+      "name": "Torn Battlecards",
+      "transcript_dirs": ["-Users-matt-git-torn-battlecards"]
+    },
+    {
+      "slug": "strata-bot",
+      "name": "Strata Bot",
+      "transcript_dirs": ["-Users-matt-git-strata"]
+    },
+    {
+      "slug": "aristaeus",
+      "name": "Aristaeus",
+      "transcript_dirs": ["-Users-matt-git-aristaeus"]
+    }
+  ]
+}

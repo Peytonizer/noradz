@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-08-28 (11)
+
+- Added `tools/build_ledger.py` + `tools/ledger-projects.json`, generating
+  `data/ledger.json` — per-project sessions, prompts, tokens, cost and lines
+  changed, read from the local Claude Code transcripts in `~/.claude/projects`.
+  Data only for now; nothing renders it yet.
+- Must run locally and have its output committed: GitHub Actions can't read
+  `~/.claude`, and the transcripts exist only on the machine that produced them,
+  so the committed JSON is the durable record.
+- Only aggregates are written out. Transcripts hold full prompt text and file
+  contents, so no per-session detail, paths or session IDs reach the output.
+- Costs: sessions from newer Claude Code versions carry a recorded cost; older
+  ones predate that and are priced from token counts using a rate table in the
+  script (cache reads at 0.1x the input rate, 1-hour cache writes at 2x — checked
+  against sessions that do carry a cost, and they reproduce it exactly). Those
+  sessions are flagged rather than silently mixed in.
+
 ## 2026-08-28 (10)
 
 - Added `IDEAS.md` — a blue-sky backlog for the site's future (detail pages,
