@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-08-28 (3)
+
+- Set up the custom domain: `noradz.io` as primary (CNAME committed, Pages API
+  configured), `www.noradz.io` redirecting to it once DNS is pointed at
+  GitHub's Pages IPs.
+- Swapped the nav's single status dot for a 3x3 dot grid (an alternate mark
+  from the design canvas session).
+- Hero headline changed from "Quiet systems. / Loud results." to "Noradzeer!".
+- Added an `unspilled` badge for cards whose repo is still private (currently
+  Aristaeus) — dashed border, padlock glyph, muted colour so it doesn't
+  compete with the red accent. Plays on the footer's existing "nothing here
+  is spilled" line: an unspilled project is one that hasn't been released.
+
 ## 2026-08-28 (2)
 
 - Enabled GitHub Pages (deploy from `main`, root) — live at
