@@ -1,43 +1,40 @@
 {
-  "generated": "2026-08-28T13:47:33+00:00",
+  "generated": "2026-08-28T13:57:57+00:00",
   "notes": [
     "Costs are the API-equivalent list price of the tokens used. On a subscription plan that is not the amount actually paid.",
-    "Sessions counted in estimated_cost_sessions predate Claude Code recording its own cost; those figures are priced from token counts by this script.",
-    "wall_hours is elapsed session time, not time spent generating."
+    "Sessions counted in estimated_cost_sessions predate Claude Code recording its own cost; those figures are priced from token counts by this script."
   ],
   "totals": {
     "projects": 4,
     "sessions": 15,
-    "human_turns": 100,
-    "cost_usd": 49.11,
-    "lines_added": 4519,
-    "lines_removed": 552,
-    "wall_hours": 58.6
+    "human_turns": 101,
+    "cost_usd": 50.41,
+    "lines_added": 4615,
+    "lines_removed": 585
   },
   "projects": [
     {
       "slug": "noradz",
       "name": "Noradz",
       "sessions": 3,
-      "human_turns": 22,
-      "cost_usd": 7.52,
+      "human_turns": 23,
+      "cost_usd": 8.82,
       "estimated_cost_sessions": 1,
       "tokens": {
-        "input": 7076,
-        "output": 98618,
-        "cache_read": 18925099,
-        "cache_creation": 294428
+        "input": 7112,
+        "output": 107860,
+        "cache_read": 20889246,
+        "cache_creation": 303727
       },
-      "lines_added": 817,
-      "lines_removed": 98,
-      "wall_hours": 2.2,
+      "lines_added": 913,
+      "lines_removed": 131,
       "models": [
         "claude-haiku-4-5-20251001",
         "claude-opus-5",
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-28T11:37:34.005Z",
-      "last_session": "2026-08-28T13:47:31.190Z",
+      "last_session": "2026-08-28T13:57:51.837Z",
       "unpriced_models": []
     },
     {
@@ -55,7 +52,6 @@
       },
       "lines_added": 1693,
       "lines_removed": 281,
-      "wall_hours": 9.3,
       "models": [
         "<synthetic>",
         "claude-haiku-4-5-20251001",
@@ -80,7 +76,6 @@
       },
       "lines_added": 1196,
       "lines_removed": 73,
-      "wall_hours": 20.8,
       "models": [
         "claude-haiku-4-5-20251001",
         "claude-sonnet-5"
@@ -104,7 +99,6 @@
       },
       "lines_added": 813,
       "lines_removed": 100,
-      "wall_hours": 26.3,
       "models": [
         "claude-haiku-4-5-20251001",
         "claude-sonnet-5"

@@ -1,11 +1,13 @@
 {
   "_comment": [
-    "Maps each project on the site to the Claude Code transcript directories that",
-    "produced it. Claude Code stores one .jsonl per session under",
-    "~/.claude/projects/<slugified-cwd>/, so the slug is the working directory with",
-    "'/' replaced by '-'. A project built from more than one directory (renamed repo,",
-    "work done from a parent dir) lists several. Add a project here and re-run",
-    "tools/build_ledger.py to include it in the ledger.",
+    "Maps each project on the site to the working directories it was built from.",
+    "Claude Code stores one .jsonl per session under ~/.claude/projects/<slug>/,",
+    "where the slug is the working directory with '/' replaced by '-'; the script",
+    "expands '~' and does that conversion, so paths are written here in normal form",
+    "and this file carries no absolute home path into a public repo.",
+    "",
+    "A project built from more than one directory (a renamed repo, work done from a",
+    "parent dir) lists several. Add a project here and re-run tools/build_ledger.py.",
     "",
     "'since' is optional (ISO date) and drops sessions before it — useful when a",
     "directory was reused for something unrelated beforehand."
@@ -14,22 +16,22 @@
     {
       "slug": "noradz",
       "name": "Noradz",
-      "transcript_dirs": ["-Users-matt-git-noradz"]
+      "repo_paths": ["~/git/noradz"]
     },
     {
       "slug": "torn-battlecards",
       "name": "Torn Battlecards",
-      "transcript_dirs": ["-Users-matt-git-torn-battlecards"]
+      "repo_paths": ["~/git/torn-battlecards"]
     },
     {
       "slug": "strata-bot",
       "name": "Strata Bot",
-      "transcript_dirs": ["-Users-matt-git-strata"]
+      "repo_paths": ["~/git/strata"]
     },
     {
       "slug": "aristaeus",
       "name": "Aristaeus",
-      "transcript_dirs": ["-Users-matt-git-aristaeus"]
+      "repo_paths": ["~/git/aristaeus"]
     }
   ]
 }

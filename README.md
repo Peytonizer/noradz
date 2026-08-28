@@ -15,7 +15,7 @@ index.html               page markup
 css/style.css            all styling (colour tokens, type, layout, responsive rules)
 data/ledger.json         generated build-ledger data (committed — see below)
 tools/build_ledger.py    generates data/ledger.json from Claude Code transcripts
-tools/ledger-projects.json  which transcript directories belong to which project
+tools/ledger-projects.json  which working directories belong to which project
 ```
 
 ## Build ledger

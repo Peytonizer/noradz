@@ -54,6 +54,18 @@ CACHE_WRITE_5M_MULTIPLIER = 1.25
 CACHE_WRITE_1H_MULTIPLIER = 2.0
 
 
+def transcript_dir(repo_path):
+    """Map a working directory to its Claude Code transcript directory.
+
+    Claude Code slugifies the absolute working directory to name the folder — every
+    '/' becomes '-', so /Users/x/git/noradz becomes -Users-x-git-noradz. Doing the
+    conversion here means the config file can hold ordinary '~'-relative paths and
+    never carries an absolute home path into a public repo.
+    """
+    absolute = Path(repo_path).expanduser().resolve()
+    return TRANSCRIPT_ROOT / str(absolute).replace("/", "-")
+
+
 def price_for(model):
     """Look up (input, output) $/MTok, tolerating dated model IDs like -20251001."""
     if model in MODEL_PRICES:
@@ -162,7 +174,6 @@ def summarise_session(path):
         "cache_creation_tokens": 0,
         "lines_added": 0,
         "lines_removed": 0,
-        "wall_seconds": 0,
         "cost_is_estimate": cost_state is None,
         "unpriced_models": [],
     }
@@ -171,7 +182,6 @@ def summarise_session(path):
         stats["cost_usd"] = cost_state.get("totalCostUSD", 0.0)
         stats["lines_added"] = cost_state.get("totalLinesAdded", 0)
         stats["lines_removed"] = cost_state.get("totalLinesRemoved", 0)
-        stats["wall_seconds"] = round(cost_state.get("totalDuration", 0) / 1000)
         for model, usage in (cost_state.get("modelUsage") or {}).items():
             models.add(model)
             stats["input_tokens"] += usage.get("inputTokens", 0)
@@ -212,10 +222,6 @@ def summarise_session(path):
         stats["lines_added"] = patch_added
         stats["lines_removed"] = patch_removed
         stats["unpriced_models"] = sorted(unpriced)
-        if stats["started"] and stats["ended"]:
-            start = datetime.fromisoformat(stats["started"].replace("Z", "+00:00"))
-            end = datetime.fromisoformat(stats["ended"].replace("Z", "+00:00"))
-            stats["wall_seconds"] = round((end - start).total_seconds())
 
     stats["models"] = sorted(models)
     return stats
@@ -226,10 +232,10 @@ def collect_project(project):
     sessions = []
     missing = []
 
-    for dirname in project["transcript_dirs"]:
-        directory = TRANSCRIPT_ROOT / dirname
+    for repo_path in project["repo_paths"]:
+        directory = transcript_dir(repo_path)
         if not directory.is_dir():
-            missing.append(dirname)
+            missing.append(repo_path)
             continue
         for path in sorted(directory.glob("*.jsonl")):
             summary = summarise_session(path)
@@ -247,7 +253,7 @@ def collect_project(project):
     for session in sessions:
         totals["cost_usd"] += session["cost_usd"]
         for key in ("human_turns", "input_tokens", "output_tokens", "cache_read_tokens",
-                    "cache_creation_tokens", "lines_added", "lines_removed", "wall_seconds"):
+                    "cache_creation_tokens", "lines_added", "lines_removed"):
             totals[key] += session[key]
         models.update(session["models"])
         unpriced.update(session["unpriced_models"])
@@ -271,9 +277,6 @@ def collect_project(project):
         },
         "lines_added": totals["lines_added"],
         "lines_removed": totals["lines_removed"],
-        # Wall-clock time from first to last message in each session, so it counts
-        # thinking-about-it time and coffee breaks, not just time spent generating.
-        "wall_hours": round(totals["wall_seconds"] / 3600, 1),
         "models": sorted(models),
         "first_session": min(starts) if starts else None,
         "last_session": max(ends) if ends else None,
@@ -315,7 +318,6 @@ def main():
             "subscription plan that is not the amount actually paid.",
             "Sessions counted in estimated_cost_sessions predate Claude Code recording "
             "its own cost; those figures are priced from token counts by this script.",
-            "wall_hours is elapsed session time, not time spent generating.",
         ],
         "totals": {
             "projects": len(entries),
@@ -324,7 +326,6 @@ def main():
             "cost_usd": round(sum(e["cost_usd"] for e in entries), 2),
             "lines_added": sum(e["lines_added"] for e in entries),
             "lines_removed": sum(e["lines_removed"] for e in entries),
-            "wall_hours": round(sum(e["wall_hours"] for e in entries), 1),
         },
         "projects": entries,
     }
@@ -335,16 +336,16 @@ def main():
 
     if args.show:
         print(f"{'project':<20} {'sess':>5} {'turns':>6} {'cost':>9} {'+lines':>7} "
-              f"{'-lines':>7} {'hours':>6}")
+              f"{'-lines':>7}")
         for entry in entries:
             flag = "~" if entry["estimated_cost_sessions"] else " "
             print(f"{entry['slug']:<20} {entry['sessions']:>5} {entry['human_turns']:>6} "
                   f"{flag}${entry['cost_usd']:>7.2f} {entry['lines_added']:>7} "
-                  f"{entry['lines_removed']:>7} {entry['wall_hours']:>6}")
+                  f"{entry['lines_removed']:>7}")
         totals = ledger["totals"]
         print(f"{'TOTAL':<20} {totals['sessions']:>5} {totals['human_turns']:>6} "
               f" ${totals['cost_usd']:>7.2f} {totals['lines_added']:>7} "
-              f"{totals['lines_removed']:>7} {totals['wall_hours']:>6}")
+              f"{totals['lines_removed']:>7}")
         print("~ = includes sessions whose cost this script estimated from token counts")
 
     print(f"wrote {out_path}", file=sys.stderr)

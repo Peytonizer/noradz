@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-28 (12)
+
+- Dropped the wall-clock hours column from the ledger. It measured elapsed time
+  between a session's first and last message, so a session left open overnight
+  counted as 20 hours of "work" — misleading enough not to be worth showing.
+- `ledger-projects.json` now takes ordinary `~/git/<repo>` paths instead of
+  pre-slugified transcript directory names, and the script does the conversion.
+  Keeps an absolute home path (and the username in it) out of a public repo.
+
 ## 2026-08-28 (11)
 
 - Added `tools/build_ledger.py` + `tools/ledger-projects.json`, generating
