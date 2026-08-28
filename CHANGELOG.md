@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-28 (8)
+
+- Private-repo badge: "unspilled" -> "classified" (dropped the unexplained
+  lore pun for a word that reads correctly with no context). Renamed the CSS
+  class `badge-sealed` -> `badge-private` so future wording changes don't
+  require another rename.
+
 ## 2026-08-28 (7)
 
 - About lead: "A running list of the AI stuff that's actually shipped" -> "A

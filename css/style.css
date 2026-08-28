@@ -215,9 +215,10 @@ a {
   margin: 0;
 }
 
-/* Marks a project whose repo is still private — a nod to the site's
-   "nothing here is spilled" line: it hasn't been spilled (released) yet. */
-.badge-sealed {
+/* Marks a project whose repo is still private. Class name is decoupled from
+   the label text (currently "classified") since the wording's been revised
+   more than once — rename the text without renaming the class. */
+.badge-private {
   display: inline-flex;
   align-items: center;
   gap: 5px;
