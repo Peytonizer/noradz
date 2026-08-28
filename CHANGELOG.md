@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-28 (6)
+
+- Tagline: "it is what it is" -> "does what it says on the tin" (hero subhead,
+  meta description, About lead).
+
 ## 2026-08-28 (5)
 
 - Added an About section (id `about`, in-page — no separate route) between
