@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-29 (3)
+
+- Fixed the per-card ledger footer: at 3-up card widths the stats line often
+  wraps, and laying the footer out as two flex items (`justify-content:
+  space-between`) left the `ledger ↓` link pinned beside line 1 instead of
+  following the wrapped text, so it visually floated off on its own. Switched
+  to plain inline flow (stats + a real space + link) so it wraps as one run
+  of text.
+
 ## 2026-08-29 (2)
 
 - Build ledger now renders on the site instead of just sitting in `data/ledger.json`.
