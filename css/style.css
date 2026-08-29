@@ -216,7 +216,7 @@ a {
 }
 
 /* Marks a project whose repo is still private. Class name is decoupled from
-   the label text (currently "classified") since the wording's been revised
+   the label text (currently "private") since the wording's been revised
    more than once — rename the text without renaming the class. */
 .badge-private {
   display: inline-flex;

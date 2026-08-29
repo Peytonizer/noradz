@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-29 (5)
+
+- Tagline: "does what it says on the tin" → "that's it" (hero subhead and
+  meta description). Private-repo badge: "classified" → "private".
+
 ## 2026-08-29 (4)
 
 - Ledger detail row now leads with a single "total tokens" figure (compact
