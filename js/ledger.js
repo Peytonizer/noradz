@@ -25,6 +25,12 @@ function formatLines(added, removed) {
   return `+${added.toLocaleString('en-AU')} / ${MINUS}${removed.toLocaleString('en-AU')}`;
 }
 
+function formatTokenTotal(n) {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
+  return String(n);
+}
+
 function formatDateRange(first, last) {
   const fmt = new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
   const a = fmt.format(new Date(first));
@@ -112,9 +118,11 @@ function renderTable(ledger) {
     detailCell.colSpan = 6;
 
     const models = project.models.filter((m) => m !== '<synthetic>').join(', ');
+    const { input, output, cache_read: cacheRead, cache_creation: cacheWrite } = project.tokens;
+    const tokenTotal = input + output + cacheRead + cacheWrite;
     const detailLines = [
       `models: ${models || 'n/a'}`,
-      `tokens: ${project.tokens.input.toLocaleString('en-AU')} in / ${project.tokens.output.toLocaleString('en-AU')} out / ${project.tokens.cache_read.toLocaleString('en-AU')} cache-read / ${project.tokens.cache_creation.toLocaleString('en-AU')} cache-write`,
+      `tokens: ${formatTokenTotal(tokenTotal)} total — ${input.toLocaleString('en-AU')} in / ${output.toLocaleString('en-AU')} out / ${cacheRead.toLocaleString('en-AU')} cache-read / ${cacheWrite.toLocaleString('en-AU')} cache-write`,
       `built: ${formatDateRange(project.first_session, project.last_session)}`,
     ];
     if (project.estimated_cost_sessions) {

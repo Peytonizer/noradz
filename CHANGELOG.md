@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-29 (4)
+
+- Ledger detail row now leads with a single "total tokens" figure (compact
+  K/M formatted) ahead of the existing in/out/cache-read/cache-write
+  breakdown, rather than leaving readers to add the four up themselves.
+
 ## 2026-08-29 (3)
 
 - Fixed the per-card ledger footer: at 3-up card widths the stats line often
