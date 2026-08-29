@@ -1,40 +1,40 @@
 {
-  "generated": "2026-08-28T13:57:57+00:00",
+  "generated": "2026-08-29T22:47:14+00:00",
   "notes": [
     "Costs are the API-equivalent list price of the tokens used. On a subscription plan that is not the amount actually paid.",
     "Sessions counted in estimated_cost_sessions predate Claude Code recording its own cost; those figures are priced from token counts by this script."
   ],
   "totals": {
     "projects": 4,
-    "sessions": 15,
-    "human_turns": 101,
-    "cost_usd": 50.41,
-    "lines_added": 4615,
-    "lines_removed": 585
+    "sessions": 20,
+    "human_turns": 157,
+    "cost_usd": 108.81,
+    "lines_added": 10222,
+    "lines_removed": 1160
   },
   "projects": [
     {
       "slug": "noradz",
       "name": "Noradz",
-      "sessions": 3,
-      "human_turns": 23,
-      "cost_usd": 8.82,
+      "sessions": 5,
+      "human_turns": 41,
+      "cost_usd": 22.02,
       "estimated_cost_sessions": 1,
       "tokens": {
-        "input": 7112,
-        "output": 107860,
-        "cache_read": 20889246,
-        "cache_creation": 303727
+        "input": 14448,
+        "output": 231593,
+        "cache_read": 54056062,
+        "cache_creation": 846427
       },
-      "lines_added": 913,
-      "lines_removed": 131,
+      "lines_added": 1864,
+      "lines_removed": 155,
       "models": [
         "claude-haiku-4-5-20251001",
         "claude-opus-5",
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-28T11:37:34.005Z",
-      "last_session": "2026-08-28T13:57:51.837Z",
+      "last_session": "2026-08-29T22:47:09.985Z",
       "unpriced_models": []
     },
     {
@@ -87,24 +87,25 @@
     {
       "slug": "aristaeus",
       "name": "Aristaeus",
-      "sessions": 5,
-      "human_turns": 39,
-      "cost_usd": 13.36,
-      "estimated_cost_sessions": 3,
+      "sessions": 8,
+      "human_turns": 77,
+      "cost_usd": 58.56,
+      "estimated_cost_sessions": 4,
       "tokens": {
-        "input": 2620,
-        "output": 215525,
-        "cache_read": 41982144,
-        "cache_creation": 700875
+        "input": 27689,
+        "output": 815516,
+        "cache_read": 187975587,
+        "cache_creation": 2448946
       },
-      "lines_added": 813,
-      "lines_removed": 100,
+      "lines_added": 5469,
+      "lines_removed": 651,
       "models": [
         "claude-haiku-4-5-20251001",
+        "claude-opus-5",
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-25T08:27:09.442Z",
-      "last_session": "2026-08-26T10:35:36.751Z",
+      "last_session": "2026-08-29T22:47:06.779Z",
       "unpriced_models": []
     }
   ]
