@@ -260,11 +260,10 @@ a {
 /* Ledger stat line appended to a card by js/ledger.js once data/ledger.json
    loads. Absent (rather than empty) when the fetch fails, e.g. opened via
    file:// — see the note in that script. */
+/* Deliberately not flex: the stats text often wraps at 3-up card widths,
+   and a flex-positioned link stays pinned beside its first line instead of
+   following it. Plain inline flow wraps stats + link as one run of text. */
 .card-ledger {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid var(--border-soft);

@@ -60,7 +60,11 @@ function renderCardFooters(ledger) {
     ));
     const link = el('a', 'card-ledger-link', 'ledger ↓');
     link.href = '#ledger';
-    footer.append(link);
+    // A real space, not a flex gap: at 3-up card widths the stats text often
+    // wraps, and a flex-positioned link stays pinned beside line 1 rather
+    // than following it. Plain inline flow wraps the whole thing as one
+    // sentence instead, however many lines it takes.
+    footer.append(document.createTextNode(' '), link);
     card.append(footer);
   });
 }
