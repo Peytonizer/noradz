@@ -257,6 +257,145 @@ a {
   color: var(--text-muted);
 }
 
+/* Ledger stat line appended to a card by js/ledger.js once data/ledger.json
+   loads. Absent (rather than empty) when the fetch fails, e.g. opened via
+   file:// — see the note in that script. */
+.card-ledger {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-soft);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.card-ledger-stats {
+  color: var(--text-faint);
+}
+
+.card-ledger-link {
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.card-ledger-link:hover {
+  color: var(--accent-hover);
+}
+
+/* ---------- Ledger ---------- */
+
+.ledger {
+  padding: 100px 72px;
+  border-top: 1px solid var(--border);
+}
+
+.ledger-lead {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 0 32px;
+}
+
+.ledger-lead-link {
+  color: var(--accent);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.ledger-lead-link:hover {
+  color: var(--accent-hover);
+}
+
+.ledger-totals {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+  margin: 0 0 32px;
+}
+
+.ledger-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.ledger-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.ledger-table thead th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ledger-cell {
+  padding: 14px 20px;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.ledger-cell-name {
+  color: var(--text);
+  white-space: normal;
+}
+
+.ledger-cell-toggle {
+  width: 1%;
+}
+
+.ledger-toggle {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ledger-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent-hover);
+}
+
+.ledger-detail-cell {
+  padding: 4px 20px 18px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.ledger-detail-line {
+  margin: 6px 0;
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.ledger-notes {
+  margin-top: 20px;
+}
+
+.ledger-note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-faintest);
+  margin: 4px 0;
+}
+
 /* ---------- About ---------- */
 
 .about {
@@ -314,6 +453,7 @@ a {
   .nav,
   .hero,
   .projects,
+  .ledger,
   .site-footer {
     padding-left: 32px;
     padding-right: 32px;

@@ -25,6 +25,7 @@
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#work">work</a>
+      <a href="#ledger">ledger</a>
       <a href="#about">about</a>
       <span class="status-grid" aria-hidden="true">
         <span></span><span></span><span></span>
@@ -51,7 +52,7 @@
     </div>
     <div class="project-grid">
 
-      <article class="card">
+      <article class="card" data-ledger-slug="torn-battlecards">
         <p class="kicker">01 · tool</p>
         <h3>Torn Battlecards</h3>
         <p class="desc">Turns a Torn City ranked-war CSV into shareable battlecard PNGs for the whole faction — no server, no accounts.</p>
@@ -62,7 +63,7 @@
         </div>
       </article>
 
-      <article class="card">
+      <article class="card" data-ledger-slug="strata-bot">
         <p class="kicker">02 · reference</p>
         <h3>Strata Bot</h3>
         <p class="desc">A static knowledge base of ACT unit-titles legislation, built for an automated assistant to reference.</p>
@@ -73,7 +74,7 @@
         </div>
       </article>
 
-      <article class="card">
+      <article class="card" data-ledger-slug="aristaeus">
         <div class="card-meta">
           <p class="kicker">03 · app</p>
           <span class="badge-private" title="Private repository — not public yet">
@@ -96,6 +97,31 @@
     </div>
   </section>
 
+  <section class="ledger" id="ledger">
+    <div class="section-header">
+      <span class="eyebrow">BUILD LEDGER</span>
+      <span class="count ledger-count">— PROJECTS TRACKED</span>
+    </div>
+    <p class="ledger-lead">How much AI work went into the above, straight from local Claude Code transcripts — see <a href="https://github.com/Peytonizer/noradz/blob/main/README.md#build-ledger" class="ledger-lead-link">how it's built</a>.</p>
+    <p class="ledger-totals">—</p>
+    <div class="ledger-table-wrap">
+      <table class="ledger-table">
+        <thead>
+          <tr>
+            <th>project</th>
+            <th>sessions</th>
+            <th>turns</th>
+            <th>cost</th>
+            <th>lines</th>
+            <th aria-hidden="true"></th>
+          </tr>
+        </thead>
+        <tbody><!-- populated by js/ledger.js from data/ledger.json --></tbody>
+      </table>
+    </div>
+    <div class="ledger-notes"></div>
+  </section>
+
   <section class="about" id="about">
     <p class="about-eyebrow">ABOUT</p>
     <p class="about-lead">A record of AI builds that made it out the door.</p>
@@ -106,5 +132,6 @@
     <p class="lore">nothing here is spilled</p>
   </footer>
 
+  <script src="js/ledger.js" defer></script>
 </body>
 </html>

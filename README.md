@@ -13,6 +13,7 @@ here, so this repo stays the published site and nothing else.
 ```
 index.html               page markup
 css/style.css            all styling (colour tokens, type, layout, responsive rules)
+js/ledger.js             fetches data/ledger.json and renders the build ledger (see below)
 data/ledger.json         generated build-ledger data (committed — see below)
 tools/build_ledger.py    generates data/ledger.json from Claude Code transcripts
 tools/ledger-projects.json  which working directories belong to which project
@@ -49,6 +50,12 @@ Three things about it worth knowing:
   wherever these numbers are shown.
 
 Adding a project means adding an entry to `tools/ledger-projects.json` and re-running.
+
+`js/ledger.js` fetches `data/ledger.json` at page load and renders it: a one-line stat
+footer on each project card (matched to the ledger by a `data-ledger-slug` attribute on
+the card), and a `#ledger` section with sitewide totals and a per-project table. There's
+no build step tying the two together — regenerate `data/ledger.json` and commit it, and
+the site picks up the new numbers on next load.
 
 ## Run locally
 

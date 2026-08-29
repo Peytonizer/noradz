@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-08-29 (2)
+
+- Build ledger now renders on the site instead of just sitting in `data/ledger.json`.
+  A small vanilla-JS file (`js/ledger.js`, the site's first script) fetches the JSON at
+  runtime and populates two things: a compact stat line on each project card (sessions,
+  cost, lines changed) linking down to a new `#ledger` section with sitewide totals and
+  a per-project table, each row expandable for tokens, models and build dates.
+- Fetched at runtime rather than hand-typed into `index.html`, so re-running
+  `build_ledger.py` and committing the new JSON is enough to update the site — no HTML
+  edits to keep in sync.
+- The cost caveats (API-equivalent list price, not money paid; some older sessions'
+  cost is estimated from token counts) are read from `ledger.json`'s own `notes` field,
+  so the wording lives in one place — `tools/build_ledger.py` — not duplicated in the
+  page.
+- No dependencies added; kept to the same "no build step, no framework" approach as
+  the rest of the site.
+
 ## 2026-08-29
 
 - Moved the internal working documents out of this public repo and into a private
