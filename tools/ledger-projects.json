@@ -32,6 +32,11 @@
       "slug": "aristaeus",
       "name": "Aristaeus",
       "repo_paths": ["~/git/aristaeus"]
+    },
+    {
+      "slug": "qrgen",
+      "name": "qrgen",
+      "repo_paths": ["~/git/qrgen"]
     }
   ]
 }

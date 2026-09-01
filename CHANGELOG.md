@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-01
+
+- Added qrgen (04) to the work grid and the ledger project list. Refreshed
+  `data/ledger.json` to include its sessions alongside the existing projects.
+
 ## 2026-08-29 (5)
 
 - Tagline: "does what it says on the tin" → "that's it" (hero subhead and

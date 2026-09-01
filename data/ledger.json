@@ -1,40 +1,40 @@
 {
-  "generated": "2026-08-30T11:31:47+00:00",
+  "generated": "2026-09-01T10:31:15+00:00",
   "notes": [
     "Costs are the API-equivalent list price of the tokens used. On a subscription plan that is not the amount actually paid.",
     "Sessions counted in estimated_cost_sessions predate Claude Code recording its own cost; those figures are priced from token counts by this script."
   ],
   "totals": {
-    "projects": 4,
-    "sessions": 24,
-    "human_turns": 196,
-    "cost_usd": 195.47,
-    "lines_added": 14601,
-    "lines_removed": 1367
+    "projects": 5,
+    "sessions": 34,
+    "human_turns": 240,
+    "cost_usd": 298.82,
+    "lines_added": 22105,
+    "lines_removed": 2044
   },
   "projects": [
     {
       "slug": "noradz",
       "name": "Noradz",
-      "sessions": 5,
-      "human_turns": 43,
-      "cost_usd": 22.39,
+      "sessions": 6,
+      "human_turns": 44,
+      "cost_usd": 22.94,
       "estimated_cost_sessions": 1,
       "tokens": {
-        "input": 14472,
-        "output": 235222,
-        "cache_read": 54548716,
-        "cache_creation": 904971
+        "input": 16388,
+        "output": 237754,
+        "cache_read": 55144825,
+        "cache_creation": 1005949
       },
-      "lines_added": 1864,
-      "lines_removed": 155,
+      "lines_added": 1881,
+      "lines_removed": 156,
       "models": [
         "claude-haiku-4-5-20251001",
         "claude-opus-5",
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-28T11:37:34.005Z",
-      "last_session": "2026-08-30T11:31:42.013Z",
+      "last_session": "2026-09-01T10:31:13.318Z",
       "unpriced_models": []
     },
     {
@@ -64,48 +64,73 @@
     {
       "slug": "strata-bot",
       "name": "Strata Bot",
-      "sessions": 1,
-      "human_turns": 4,
-      "cost_usd": 7.52,
-      "estimated_cost_sessions": 0,
+      "sessions": 4,
+      "human_turns": 15,
+      "cost_usd": 16.41,
+      "estimated_cost_sessions": 1,
       "tokens": {
-        "input": 57886,
-        "output": 162879,
-        "cache_read": 23905686,
-        "cache_creation": 263483
+        "input": 61594,
+        "output": 252420,
+        "cache_read": 32529776,
+        "cache_creation": 674927
       },
       "lines_added": 1196,
       "lines_removed": 73,
       "models": [
         "claude-haiku-4-5-20251001",
+        "claude-opus-5",
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-27T10:51:22.255Z",
-      "last_session": "2026-08-27T12:10:45.787Z",
+      "last_session": "2026-09-01T07:00:14.396Z",
       "unpriced_models": []
     },
     {
       "slug": "aristaeus",
       "name": "Aristaeus",
-      "sessions": 12,
-      "human_turns": 114,
-      "cost_usd": 144.85,
-      "estimated_cost_sessions": 4,
+      "sessions": 16,
+      "human_turns": 139,
+      "cost_usd": 231.61,
+      "estimated_cost_sessions": 3,
       "tokens": {
-        "input": 41700,
-        "output": 1329652,
-        "cache_read": 316028411,
-        "cache_creation": 3946164
+        "input": 108932,
+        "output": 1974325,
+        "cache_read": 630518212,
+        "cache_creation": 5830712
       },
-      "lines_added": 9848,
-      "lines_removed": 858,
+      "lines_added": 15372,
+      "lines_removed": 1459,
       "models": [
         "claude-haiku-4-5-20251001",
         "claude-opus-5",
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-25T08:27:09.442Z",
-      "last_session": "2026-08-30T11:27:35.473Z",
+      "last_session": "2026-09-01T08:57:35.964Z",
+      "unpriced_models": []
+    },
+    {
+      "slug": "qrgen",
+      "name": "qrgen",
+      "sessions": 2,
+      "human_turns": 7,
+      "cost_usd": 7.15,
+      "estimated_cost_sessions": 1,
+      "tokens": {
+        "input": 2872,
+        "output": 96341,
+        "cache_read": 7490541,
+        "cache_creation": 248461
+      },
+      "lines_added": 1963,
+      "lines_removed": 75,
+      "models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5",
+        "claude-sonnet-5"
+      ],
+      "first_session": "2026-09-01T09:27:03.759Z",
+      "last_session": "2026-09-01T10:31:11.599Z",
       "unpriced_models": []
     }
   ]
