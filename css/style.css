@@ -215,6 +215,20 @@ a {
   margin: 0;
 }
 
+/* Link to a project's live noradz.io subdomain, shown beside the kicker.
+   Not a whole-card link: the card already nests the ledger-stat anchor
+   below, and a link inside a link is invalid HTML. */
+.card-visit {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.card-visit:hover {
+  color: var(--accent-hover);
+}
+
 /* Marks a project whose repo is still private. Class name is decoupled from
    the label text (currently "private") since the wording's been revised
    more than once — rename the text without renaming the class. */

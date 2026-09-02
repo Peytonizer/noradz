@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-02
+
+- Added a "visit ↗" link to each card whose project is served from a
+  noradz.io subdomain (Torn Battlecards, Strata Bot, qrgen), sitting beside
+  the kicker. Not a whole-card link: the card already nests the ledger-stat
+  anchor below it, and a link inside a link is invalid HTML.
+
 ## 2026-09-01
 
 - Added qrgen (04) to the work grid and the ledger project list. Refreshed
