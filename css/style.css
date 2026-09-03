@@ -298,11 +298,17 @@ a {
   color: var(--accent-hover);
 }
 
-/* ---------- Ledger ---------- */
+/* ---------- Ledger ----------
+   Lives on its own page (ledger.html) behind a .page-head, which already
+   supplies the divider above — no border-top needed here. */
 
 .ledger {
-  padding: 100px 72px;
-  border-top: 1px solid var(--border);
+  padding: 56px 72px 100px;
+}
+
+.ledger .count {
+  display: block;
+  margin: 0 0 32px;
 }
 
 .ledger-lead {
@@ -444,7 +450,7 @@ a {
    smaller heading, no CTA row. */
 
 .page-head {
-  padding: 100px 72px 64px;
+  padding: 100px 72px 40px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -463,7 +469,7 @@ a {
 /* ---------- Log ---------- */
 
 .log {
-  padding: 80px 72px 100px;
+  padding: 56px 72px 100px;
 }
 
 .feed-links {
@@ -540,7 +546,7 @@ a {
 /* ---------- Now ---------- */
 
 .now {
-  padding: 80px 72px 100px;
+  padding: 56px 72px 100px;
 }
 
 .now-updated {

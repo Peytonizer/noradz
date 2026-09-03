@@ -6,6 +6,13 @@
   "description": "Dated notes on what shipped, broke, or changed across Matt's AI builds.",
   "items": [
     {
+      "id": "2026-09-03-ledger-page",
+      "url": "https://noradz.io/log.html#2026-09-03-ledger-page",
+      "title": "The ledger gets its own page",
+      "content_html": "<p>The sitewide ledger table moved off the homepage and onto its own page at <code>ledger.html</code>, the same way <code>/log</code> and <code>/now</code> did a few hours earlier. The per-card stat line stays on each project card; its link now points at the new page instead of scrolling down the one it used to live on.</p><p>Also backfilled this log with the site's real history, from launch day onward, instead of leaving it sitting on two entries.</p>",
+      "date_published": "2026-09-03T21:00:00+10:00"
+    },
+    {
       "id": "2026-09-03-log-launch",
       "url": "https://noradz.io/log.html#2026-09-03-log-launch",
       "title": "This log exists now",
@@ -18,6 +25,48 @@
       "title": "Scrubber shipped, and the ledger started looking for itself",
       "content_html": "<p>Scrubber &mdash; a client-side tool that redacts secrets out of text before it goes into an LLM, then puts them back afterwards &mdash; went live at <a href=\"https://scrubber.noradz.io\">scrubber.noradz.io</a> today, project 05 on the grid.</p><p>While it was in, the build ledger tooling learned to scan <code>~/git</code> for new project repos on its own, instead of waiting to be told about them by name.</p>",
       "date_published": "2026-09-03T09:00:00+10:00"
+    },
+    {
+      "id": "2026-09-02-visit-links",
+      "url": "https://noradz.io/log.html#2026-09-02-visit-links",
+      "title": "Visit links",
+      "content_html": "<p>Every card whose project runs on a live noradz.io subdomain now carries a &ldquo;visit ↗&rdquo; link beside its kicker. Not a whole-card link &mdash; the card already nests the ledger-stat link below it, and a link inside a link isn't valid HTML.</p>",
+      "date_published": "2026-09-02T10:00:00+10:00"
+    },
+    {
+      "id": "2026-09-01-qrgen",
+      "url": "https://noradz.io/log.html#2026-09-01-qrgen",
+      "title": "qrgen joins the grid",
+      "content_html": "<p>Added qrgen as project 04: turns a spreadsheet of contacts into scannable QR codes that save straight to the phone, entirely client-side. Refreshed the ledger to include its sessions alongside the rest.</p>",
+      "date_published": "2026-09-01T11:00:00+10:00"
+    },
+    {
+      "id": "2026-08-29-ledger-renders",
+      "url": "https://noradz.io/log.html#2026-08-29-ledger-renders",
+      "title": "The ledger renders on the site",
+      "content_html": "<p>The build ledger stopped being a file nobody could see and started showing up on the page: a compact stat line on each project card, and a section with sitewide totals and a per-project table you could expand for tokens, models and build dates.</p><p><code>js/ledger.js</code> was the site's first script &mdash; fetched at runtime, no build step, so re-running the Python script and committing the new JSON was enough to update the numbers.</p>",
+      "date_published": "2026-08-29T15:00:00+10:00"
+    },
+    {
+      "id": "2026-08-29-private-docs",
+      "url": "https://noradz.io/log.html#2026-08-29-private-docs",
+      "title": "Working docs moved out of the public repo",
+      "content_html": "<p>Moved the internal working documents &mdash; agent instructions, the idea backlog, the build spec &mdash; out of this public repo and into a private <code>workbench</code> repo. This repo is now the published site, its docs and the ledger tooling, nothing else.</p><p>History wasn't rewritten; the old files still exist in earlier commits. They're a style guide and a roadmap, not a secret worth a disruptive force-push over.</p>",
+      "date_published": "2026-08-29T09:00:00+10:00"
+    },
+    {
+      "id": "2026-08-28-ledger-data",
+      "url": "https://noradz.io/log.html#2026-08-28-ledger-data",
+      "title": "Ledger data, before it had anywhere to live",
+      "content_html": "<p>Added <code>tools/build_ledger.py</code>: it reduces the local Claude Code transcripts under <code>~/.claude/projects</code> into per-project session counts, tokens, cost and lines changed. Nothing rendered it yet &mdash; just a JSON file, committed, because GitHub Actions can't see <code>~/.claude</code> and the transcripts only live on this machine.</p><p>Only aggregates ever leave the transcripts. They hold full prompt text and command output, so the script emits counts and totals and nothing else.</p>",
+      "date_published": "2026-08-28T20:00:00+10:00"
+    },
+    {
+      "id": "2026-08-28-launch",
+      "url": "https://noradz.io/log.html#2026-08-28-launch",
+      "title": "Noradz goes live",
+      "content_html": "<p>First public release, live at <a href=\"https://noradz.io\">noradz.io</a>. Scaffolded from a design spec (nav, hero, a 3-up project grid, footer &mdash; the &ldquo;Signal&rdquo; direction: red and near-black, techy, one accent colour), then the placeholder cards got swapped for real projects: Torn Battlecards, Strata Bot, Aristaeus.</p><p>Plain static HTML and CSS, no framework, deployed via GitHub Pages on a custom domain &mdash; the same pattern the rest of this log follows.</p>",
+      "date_published": "2026-08-28T14:00:00+10:00"
     }
   ]
 }

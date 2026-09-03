@@ -5,6 +5,13 @@
     <link>https://noradz.io</link>
     <description>Dated notes on what shipped, broke, or changed across Matt's AI builds.</description>
     <item>
+      <title>The ledger gets its own page</title>
+      <link>https://noradz.io/log.html#2026-09-03-ledger-page</link>
+      <guid isPermaLink="true">https://noradz.io/log.html#2026-09-03-ledger-page</guid>
+      <pubDate>Thu, 03 Sep 2026 21:00:00 +1000</pubDate>
+      <description>&lt;p&gt;The sitewide ledger table moved off the homepage and onto its own page at &lt;code&gt;ledger.html&lt;/code&gt;, the same way &lt;code&gt;/log&lt;/code&gt; and &lt;code&gt;/now&lt;/code&gt; did a few hours earlier. The per-card stat line stays on each project card; its link now points at the new page instead of scrolling down the one it used to live on.&lt;/p&gt;&lt;p&gt;Also backfilled this log with the site's real history, from launch day onward, instead of leaving it sitting on two entries.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>This log exists now</title>
       <link>https://noradz.io/log.html#2026-09-03-log-launch</link>
       <guid isPermaLink="true">https://noradz.io/log.html#2026-09-03-log-launch</guid>
@@ -17,6 +24,48 @@
       <guid isPermaLink="true">https://noradz.io/log.html#2026-09-03-scrubber-ledger</guid>
       <pubDate>Thu, 03 Sep 2026 09:00:00 +1000</pubDate>
       <description>&lt;p&gt;Scrubber &amp;mdash; a client-side tool that redacts secrets out of text before it goes into an LLM, then puts them back afterwards &amp;mdash; went live at &lt;a href="https://scrubber.noradz.io"&gt;scrubber.noradz.io&lt;/a&gt; today, project 05 on the grid.&lt;/p&gt;&lt;p&gt;While it was in, the build ledger tooling learned to scan &lt;code&gt;~/git&lt;/code&gt; for new project repos on its own, instead of waiting to be told about them by name.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Visit links</title>
+      <link>https://noradz.io/log.html#2026-09-02-visit-links</link>
+      <guid isPermaLink="true">https://noradz.io/log.html#2026-09-02-visit-links</guid>
+      <pubDate>Wed, 02 Sep 2026 10:00:00 +1000</pubDate>
+      <description>&lt;p&gt;Every card whose project runs on a live noradz.io subdomain now carries a &amp;ldquo;visit ↗&amp;rdquo; link beside its kicker. Not a whole-card link &amp;mdash; the card already nests the ledger-stat link below it, and a link inside a link isn't valid HTML.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>qrgen joins the grid</title>
+      <link>https://noradz.io/log.html#2026-09-01-qrgen</link>
+      <guid isPermaLink="true">https://noradz.io/log.html#2026-09-01-qrgen</guid>
+      <pubDate>Tue, 01 Sep 2026 11:00:00 +1000</pubDate>
+      <description>&lt;p&gt;Added qrgen as project 04: turns a spreadsheet of contacts into scannable QR codes that save straight to the phone, entirely client-side. Refreshed the ledger to include its sessions alongside the rest.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The ledger renders on the site</title>
+      <link>https://noradz.io/log.html#2026-08-29-ledger-renders</link>
+      <guid isPermaLink="true">https://noradz.io/log.html#2026-08-29-ledger-renders</guid>
+      <pubDate>Sat, 29 Aug 2026 15:00:00 +1000</pubDate>
+      <description>&lt;p&gt;The build ledger stopped being a file nobody could see and started showing up on the page: a compact stat line on each project card, and a section with sitewide totals and a per-project table you could expand for tokens, models and build dates.&lt;/p&gt;&lt;p&gt;&lt;code&gt;js/ledger.js&lt;/code&gt; was the site's first script &amp;mdash; fetched at runtime, no build step, so re-running the Python script and committing the new JSON was enough to update the numbers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Working docs moved out of the public repo</title>
+      <link>https://noradz.io/log.html#2026-08-29-private-docs</link>
+      <guid isPermaLink="true">https://noradz.io/log.html#2026-08-29-private-docs</guid>
+      <pubDate>Sat, 29 Aug 2026 09:00:00 +1000</pubDate>
+      <description>&lt;p&gt;Moved the internal working documents &amp;mdash; agent instructions, the idea backlog, the build spec &amp;mdash; out of this public repo and into a private &lt;code&gt;workbench&lt;/code&gt; repo. This repo is now the published site, its docs and the ledger tooling, nothing else.&lt;/p&gt;&lt;p&gt;History wasn't rewritten; the old files still exist in earlier commits. They're a style guide and a roadmap, not a secret worth a disruptive force-push over.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ledger data, before it had anywhere to live</title>
+      <link>https://noradz.io/log.html#2026-08-28-ledger-data</link>
+      <guid isPermaLink="true">https://noradz.io/log.html#2026-08-28-ledger-data</guid>
+      <pubDate>Fri, 28 Aug 2026 20:00:00 +1000</pubDate>
+      <description>&lt;p&gt;Added &lt;code&gt;tools/build_ledger.py&lt;/code&gt;: it reduces the local Claude Code transcripts under &lt;code&gt;~/.claude/projects&lt;/code&gt; into per-project session counts, tokens, cost and lines changed. Nothing rendered it yet &amp;mdash; just a JSON file, committed, because GitHub Actions can't see &lt;code&gt;~/.claude&lt;/code&gt; and the transcripts only live on this machine.&lt;/p&gt;&lt;p&gt;Only aggregates ever leave the transcripts. They hold full prompt text and command output, so the script emits counts and totals and nothing else.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Noradz goes live</title>
+      <link>https://noradz.io/log.html#2026-08-28-launch</link>
+      <guid isPermaLink="true">https://noradz.io/log.html#2026-08-28-launch</guid>
+      <pubDate>Fri, 28 Aug 2026 14:00:00 +1000</pubDate>
+      <description>&lt;p&gt;First public release, live at &lt;a href="https://noradz.io"&gt;noradz.io&lt;/a&gt;. Scaffolded from a design spec (nav, hero, a 3-up project grid, footer &amp;mdash; the &amp;ldquo;Signal&amp;rdquo; direction: red and near-black, techy, one accent colour), then the placeholder cards got swapped for real projects: Torn Battlecards, Strata Bot, Aristaeus.&lt;/p&gt;&lt;p&gt;Plain static HTML and CSS, no framework, deployed via GitHub Pages on a custom domain &amp;mdash; the same pattern the rest of this log follows.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log — Noradz</title>
-  <meta name="description" content="Dated notes on what shipped, broke, or changed across Matt's AI builds.">
+  <title>Ledger — Noradz</title>
+  <meta name="description" content="How much AI work went into each project, straight from local Claude Code transcripts.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,6 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="alternate" type="application/feed+json" title="noradz — log" href="data/log.json">
-  <link rel="alternate" type="application/rss+xml" title="noradz — log" href="feed.xml">
 </head>
 <body>
 
@@ -40,23 +38,36 @@
   </header>
 
   <section class="page-head">
-    <p class="eyebrow">// LOG</p>
-    <h1>What actually happened.</h1>
-    <p class="subhead">Dated notes on what shipped, broke, or changed — kept short, kept honest.</p>
+    <p class="eyebrow">// LEDGER</p>
+    <h1>How much AI went into this.</h1>
+    <p class="subhead">Sessions, prompts, tokens and lines changed, straight from local Claude Code transcripts — see <a href="https://github.com/Peytonizer/noradz/blob/main/README.md#build-ledger" class="ledger-lead-link">how it's built</a>.</p>
   </section>
 
-  <section class="log">
-    <p class="feed-links">
-      <a href="feed.xml">RSS</a>
-      <a href="data/log.json">JSON feed</a>
-    </p>
-    <div class="log-list"><!-- populated by js/log.js from data/log.json --></div>
+  <section class="ledger" id="ledger">
+    <p class="count ledger-count">—</p>
+    <p class="ledger-totals">—</p>
+    <div class="ledger-table-wrap">
+      <table class="ledger-table">
+        <thead>
+          <tr>
+            <th>project</th>
+            <th>sessions</th>
+            <th>turns</th>
+            <th>cost</th>
+            <th>lines</th>
+            <th aria-hidden="true"></th>
+          </tr>
+        </thead>
+        <tbody><!-- populated by js/ledger.js from data/ledger.json --></tbody>
+      </table>
+    </div>
+    <div class="ledger-notes"></div>
   </section>
 
   <footer class="site-footer">
     <p class="lore">nothing here is spilled</p>
   </footer>
 
-  <script src="js/log.js" defer></script>
+  <script src="js/ledger.js" defer></script>
 </body>
 </html>

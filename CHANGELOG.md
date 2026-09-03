@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-09-03 (2)
+
+- Moved the sitewide ledger table off the homepage and onto its own page,
+  `ledger.html`, the same way `/log` and `/now` got their own pages earlier
+  today. `js/ledger.js` is unchanged in logic — it already no-ops when its
+  target elements aren't on the page — just the card-footer link (now
+  "ledger →", pointing at `ledger.html`) and the section's CSS (no more
+  `border-top`, since a `.page-head` now supplies the divider above it).
+- Tightened the vertical spacing on `.page-head` and the sections that
+  follow it (`.log`, `.now`, `.ledger`) — the gap between the page title and
+  the first real content was noticeably wider than the equivalent gap on the
+  homepage.
+- Backfilled `data/log.json` with the site's real history from launch day
+  onward (7 new entries drawn from this changelog, condensed to the
+  interesting decisions rather than every line), instead of leaving the log
+  sitting on the two entries it launched with. Regenerated `feed.xml`.
+
 ## 2026-09-03
 
 - Added `/log` (`log.html`) and `/now` (`now.html`). Log entries live in

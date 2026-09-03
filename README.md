@@ -13,6 +13,7 @@ here, so this repo stays the published site and nothing else.
 ```
 index.html               homepage markup
 log.html                 /log — dated short entries (see below)
+ledger.html              /ledger — sitewide build ledger totals + table (see below)
 now.html                 /now — what's being built this month, hand-edited
 css/style.css            all styling (colour tokens, type, layout, responsive rules)
 js/ledger.js             fetches data/ledger.json and renders the build ledger (see below)
@@ -57,11 +58,14 @@ Three things about it worth knowing:
 
 Adding a project means adding an entry to `tools/ledger-projects.json` and re-running.
 
-`js/ledger.js` fetches `data/ledger.json` at page load and renders it: a one-line stat
-footer on each project card (matched to the ledger by a `data-ledger-slug` attribute on
-the card), and a `#ledger` section with sitewide totals and a per-project table. There's
-no build step tying the two together — regenerate `data/ledger.json` and commit it, and
-the site picks up the new numbers on next load.
+`js/ledger.js` fetches `data/ledger.json` at page load and renders it in two places: a
+one-line stat footer on each homepage project card (matched to the ledger by a
+`data-ledger-slug` attribute on the card, linking through to `/ledger`), and the
+`/ledger` page itself — sitewide totals and a per-project table. The same script runs on
+both pages; each render function no-ops if its target elements aren't present, so
+`index.html` only gets the card footers and `ledger.html` only gets the table. There's no
+build step tying any of it together — regenerate `data/ledger.json` and commit it, and
+both pages pick up the new numbers on next load.
 
 ## Log
 
