@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-03
+
+- Added Scrubber (05) to the work grid and the ledger project list, with a
+  visit link to its live subdomain. Refreshed `data/ledger.json` to include
+  its sessions alongside the existing projects.
+
 ## 2026-09-02
 
 - Added a "visit ↗" link to each card whose project is served from a
