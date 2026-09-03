@@ -14,10 +14,27 @@
   --text: #ededed;
   --text-muted: #9a9aa0;
   --text-dim: #8a8a90;
-  --text-faint: #6a6a70;
-  --text-faintest: #4a4a50;
+  /* faint/faintest brightened from the original spec values (#6a6a70, #4a4a50 —
+     3.7:1 and 2.2:1 against --bg, both below WCAG AA's 4.5:1 for normal text)
+     after Matt found the live site hard to read. These carry section labels,
+     table headers, dates and the ledger's cost caveats — read constantly, not
+     just decorative. Matches the same fix already shipped in Scrubber's
+     Tailwind config, which copied this palette from noradz in the first
+     place; the two "Signal"-themed sites should stay in sync. faint now
+     clears AA (4.8:1); faintest stays the dimmest tier by design but is no
+     longer near-invisible (3.3:1).
+     — 2026-09-03 */
+  --text-faint: #7d7d84;
+  --text-faintest: #626268;
   --accent: #d1293d;
   --accent-hover: #ee5a6b;
+  /* accent-as-text variant: --accent itself is only 3.8:1 against --bg, below
+     AA for normal-size text. Used for kickers, eyebrows and inline links —
+     real content, not decoration. --accent stays unchanged for fills,
+     borders and the primary button (a larger, separate contrast question —
+     see the site's CHANGELOG). --accent-hover (5.9:1) still reads as a step
+     brighter on hover. */
+  --accent-text: #de3f52;
 
   --font-body: 'Space Grotesk', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
@@ -104,7 +121,7 @@ a {
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.2em;
-  color: var(--accent);
+  color: var(--accent-text);
   margin: 0 0 24px;
 }
 
@@ -199,7 +216,7 @@ a {
 .kicker {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--accent);
+  color: var(--accent-text);
   margin: 0 0 16px;
 }
 
@@ -221,7 +238,7 @@ a {
 .card-visit {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--accent);
+  color: var(--accent-text);
   white-space: nowrap;
 }
 
@@ -290,7 +307,7 @@ a {
 }
 
 .card-ledger-link {
-  color: var(--accent);
+  color: var(--accent-text);
   white-space: nowrap;
 }
 
@@ -319,7 +336,7 @@ a {
 }
 
 .ledger-lead-link {
-  color: var(--accent);
+  color: var(--accent-text);
   border-bottom: 1px solid var(--border-soft);
 }
 
@@ -481,7 +498,7 @@ a {
 }
 
 .feed-links a {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .feed-links a:hover {
@@ -535,7 +552,7 @@ a {
 }
 
 .log-entry-body a {
-  color: var(--accent);
+  color: var(--accent-text);
   border-bottom: 1px solid var(--border-soft);
 }
 

@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-09-03 (3)
+
+- Fixed low-contrast text tokens: `--text-faint` (3.7:1 against `--bg`) and
+  `--text-faintest` (2.2:1) both fell below WCAG AA's 4.5:1 for normal text,
+  and carried real content — ledger cost caveats, table headers, log dates,
+  card stats — not just decoration. Brightened to `#7d7d84` (4.8:1) and
+  `#626268` (3.3:1), matching the fix already shipped in Scrubber's Tailwind
+  config (which copied this palette from noradz originally); the two
+  "Signal"-themed sites were quietly out of sync.
+- Added `--accent-text` (`#de3f52`, 4.6:1), used wherever `--accent` itself
+  (3.8:1) was serving as small-scale text — eyebrows, kickers, inline links —
+  rather than as a fill, border or dot. `--accent` is unchanged for those
+  uses, including the primary button's background; its dark-on-red label
+  text is a separate, harder contrast question (changing the button means
+  changing the brand red itself) left for another pass.
+
 ## 2026-09-03 (2)
 
 - Moved the sitewide ledger table off the homepage and onto its own page,
