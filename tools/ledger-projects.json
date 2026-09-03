@@ -37,6 +37,11 @@
       "slug": "qrgen",
       "name": "qrgen",
       "repo_paths": ["~/git/qrgen"]
+    },
+    {
+      "slug": "scrubber",
+      "name": "Scrubber",
+      "repo_paths": ["~/git/scrubber"]
     }
   ]
 }
