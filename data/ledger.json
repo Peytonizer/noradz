@@ -1,40 +1,40 @@
 {
-  "generated": "2026-09-03T09:01:22+00:00",
+  "generated": "2026-09-03T11:29:47+00:00",
   "notes": [
     "Costs are the API-equivalent list price of the tokens used. On a subscription plan that is not the amount actually paid.",
     "Sessions counted in estimated_cost_sessions predate Claude Code recording its own cost; those figures are priced from token counts by this script."
   ],
   "totals": {
     "projects": 6,
-    "sessions": 47,
-    "human_turns": 307,
-    "cost_usd": 410.13,
-    "lines_added": 32312,
-    "lines_removed": 3276
+    "sessions": 49,
+    "human_turns": 325,
+    "cost_usd": 445.41,
+    "lines_added": 33968,
+    "lines_removed": 3374
   },
   "projects": [
     {
       "slug": "noradz",
       "name": "Noradz",
       "sessions": 7,
-      "human_turns": 48,
-      "cost_usd": 24.36,
+      "human_turns": 56,
+      "cost_usd": 30.92,
       "estimated_cost_sessions": 1,
       "tokens": {
-        "input": 18462,
-        "output": 248916,
-        "cache_read": 57705811,
-        "cache_creation": 1203620
+        "input": 18736,
+        "output": 341939,
+        "cache_read": 76922787,
+        "cache_creation": 1650303
       },
-      "lines_added": 1924,
-      "lines_removed": 159,
+      "lines_added": 2282,
+      "lines_removed": 227,
       "models": [
         "claude-haiku-4-5-20251001",
         "claude-opus-5",
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-28T11:37:34.005Z",
-      "last_session": "2026-09-03T09:01:19.080Z",
+      "last_session": "2026-09-03T11:29:42.397Z",
       "unpriced_models": []
     },
     {
@@ -89,25 +89,25 @@
     {
       "slug": "aristaeus",
       "name": "Aristaeus",
-      "sessions": 23,
-      "human_turns": 167,
-      "cost_usd": 280.95,
+      "sessions": 24,
+      "human_turns": 176,
+      "cost_usd": 309.3,
       "estimated_cost_sessions": 4,
       "tokens": {
-        "input": 236451,
-        "output": 2434833,
-        "cache_read": 770035893,
-        "cache_creation": 6986825
+        "input": 241758,
+        "output": 2523235,
+        "cache_read": 814295433,
+        "cache_creation": 7385112
       },
-      "lines_added": 19689,
-      "lines_removed": 1921,
+      "lines_added": 20980,
+      "lines_removed": 1948,
       "models": [
         "claude-haiku-4-5-20251001",
         "claude-opus-5",
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-25T08:27:09.442Z",
-      "last_session": "2026-09-03T09:01:19.444Z",
+      "last_session": "2026-09-03T11:26:12.626Z",
       "unpriced_models": []
     },
     {
@@ -137,18 +137,18 @@
     {
       "slug": "scrubber",
       "name": "Scrubber",
-      "sessions": 5,
-      "human_turns": 25,
-      "cost_usd": 32.88,
+      "sessions": 6,
+      "human_turns": 26,
+      "cost_usd": 33.25,
       "estimated_cost_sessions": 0,
       "tokens": {
-        "input": 17173,
-        "output": 376877,
-        "cache_read": 116214245,
-        "cache_creation": 980711
+        "input": 19111,
+        "output": 381436,
+        "cache_read": 116932102,
+        "cache_creation": 1025191
       },
-      "lines_added": 3542,
-      "lines_removed": 410,
+      "lines_added": 3549,
+      "lines_removed": 413,
       "models": [
         "<synthetic>",
         "claude-haiku-4-5-20251001",
@@ -156,7 +156,7 @@
         "claude-sonnet-5"
       ],
       "first_session": "2026-09-02T22:35:20.899Z",
-      "last_session": "2026-09-03T08:57:04.862Z",
+      "last_session": "2026-09-03T09:07:28.764Z",
       "unpriced_models": []
     }
   ]
