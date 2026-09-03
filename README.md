@@ -11,12 +11,18 @@ here, so this repo stays the published site and nothing else.
 ## Structure
 
 ```
-index.html               page markup
+index.html               homepage markup
+log.html                 /log — dated short entries (see below)
+now.html                 /now — what's being built this month, hand-edited
 css/style.css            all styling (colour tokens, type, layout, responsive rules)
 js/ledger.js             fetches data/ledger.json and renders the build ledger (see below)
+js/log.js                fetches data/log.json and renders the log entries (see below)
 data/ledger.json         generated build-ledger data (committed — see below)
+data/log.json            log entries, authored by hand — also a valid JSON Feed
+feed.xml                 RSS version of data/log.json, generated (see below)
 tools/build_ledger.py    generates data/ledger.json from Claude Code transcripts
 tools/ledger-projects.json  which working directories belong to which project
+tools/build_feed.py      generates feed.xml from data/log.json
 ```
 
 ## Build ledger
@@ -56,6 +62,29 @@ footer on each project card (matched to the ledger by a `data-ledger-slug` attri
 the card), and a `#ledger` section with sitewide totals and a per-project table. There's
 no build step tying the two together — regenerate `data/ledger.json` and commit it, and
 the site picks up the new numbers on next load.
+
+## Log
+
+`/log` is dated short entries — what shipped, broke, or changed. `data/log.json` is the
+only place entries are authored, and it's written as a valid
+[JSON Feed](https://www.jsonfeed.org/version/1.1/) (`version`, `title`, `items[]` with
+`id`/`url`/`title`/`content_html`/`date_published`), so the same file is both the page's
+data source and a feed URL for readers that speak JSON Feed directly.
+`js/log.js` fetches it at page load and renders each item as a dated entry — same
+fetch-and-render pattern as `js/ledger.js`, no framework, no build step.
+
+`feed.xml` covers readers that only speak RSS. It's generated from `data/log.json` by
+`tools/build_feed.py`, so entries are never authored twice:
+
+```sh
+python3 tools/build_feed.py
+```
+
+Adding an entry means adding an item to `data/log.json` and re-running that script —
+the same local-script-then-commit pattern as the build ledger.
+
+`/now` (`now.html`) is a single hand-edited page — what's being built this month,
+updated when it changes and left stale-with-a-date otherwise. No data file, no script.
 
 ## Run locally
 

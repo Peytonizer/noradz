@@ -2,6 +2,13 @@
 
 ## 2026-09-03
 
+- Added `/log` (`log.html`) and `/now` (`now.html`). Log entries live in
+  `data/log.json`, written as a valid JSON Feed so the same file is both the
+  page's data source and a feed URL; `tools/build_feed.py` generates
+  `feed.xml` (RSS) from it for readers that don't speak JSON Feed. `/now` is
+  a single hand-edited page with no data file. Seeded the log with two real
+  entries (Scrubber shipping, the ledger's new auto-detect step) rather than
+  placeholder copy.
 - Added Scrubber (05) to the work grid and the ledger project list, with a
   visit link to its live subdomain. Refreshed `data/ledger.json` to include
   its sessions alongside the existing projects.

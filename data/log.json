@@ -1,0 +1,23 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "noradz — log",
+  "home_page_url": "https://noradz.io",
+  "feed_url": "https://noradz.io/data/log.json",
+  "description": "Dated notes on what shipped, broke, or changed across Matt's AI builds.",
+  "items": [
+    {
+      "id": "2026-09-03-log-launch",
+      "url": "https://noradz.io/log.html#2026-09-03-log-launch",
+      "title": "This log exists now",
+      "content_html": "<p>The homepage promised &ldquo;a working log&rdquo; before there was one &mdash; just a static grid. This page is the fix: short dated entries for the interesting bits (ships, breakages, decisions), a real feed at <code>feed.xml</code> and <code>data/log.json</code> so it's actually followable, and a <a href=\"now.html\">/now</a> page for what's current.</p><p>No build step: entries are edits to <code>data/log.json</code>, the same pattern as the build ledger.</p>",
+      "date_published": "2026-09-03T18:00:00+10:00"
+    },
+    {
+      "id": "2026-09-03-scrubber-ledger",
+      "url": "https://noradz.io/log.html#2026-09-03-scrubber-ledger",
+      "title": "Scrubber shipped, and the ledger started looking for itself",
+      "content_html": "<p>Scrubber &mdash; a client-side tool that redacts secrets out of text before it goes into an LLM, then puts them back afterwards &mdash; went live at <a href=\"https://scrubber.noradz.io\">scrubber.noradz.io</a> today, project 05 on the grid.</p><p>While it was in, the build ledger tooling learned to scan <code>~/git</code> for new project repos on its own, instead of waiting to be told about them by name.</p>",
+      "date_published": "2026-09-03T09:00:00+10:00"
+    }
+  ]
+}

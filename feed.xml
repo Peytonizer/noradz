@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>noradz — log</title>
+    <link>https://noradz.io</link>
+    <description>Dated notes on what shipped, broke, or changed across Matt's AI builds.</description>
+    <item>
+      <title>This log exists now</title>
+      <link>https://noradz.io/log.html#2026-09-03-log-launch</link>
+      <guid isPermaLink="true">https://noradz.io/log.html#2026-09-03-log-launch</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +1000</pubDate>
+      <description>&lt;p&gt;The homepage promised &amp;ldquo;a working log&amp;rdquo; before there was one &amp;mdash; just a static grid. This page is the fix: short dated entries for the interesting bits (ships, breakages, decisions), a real feed at &lt;code&gt;feed.xml&lt;/code&gt; and &lt;code&gt;data/log.json&lt;/code&gt; so it's actually followable, and a &lt;a href="now.html"&gt;/now&lt;/a&gt; page for what's current.&lt;/p&gt;&lt;p&gt;No build step: entries are edits to &lt;code&gt;data/log.json&lt;/code&gt;, the same pattern as the build ledger.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Scrubber shipped, and the ledger started looking for itself</title>
+      <link>https://noradz.io/log.html#2026-09-03-scrubber-ledger</link>
+      <guid isPermaLink="true">https://noradz.io/log.html#2026-09-03-scrubber-ledger</guid>
+      <pubDate>Thu, 03 Sep 2026 09:00:00 +1000</pubDate>
+      <description>&lt;p&gt;Scrubber &amp;mdash; a client-side tool that redacts secrets out of text before it goes into an LLM, then puts them back afterwards &amp;mdash; went live at &lt;a href="https://scrubber.noradz.io"&gt;scrubber.noradz.io&lt;/a&gt; today, project 05 on the grid.&lt;/p&gt;&lt;p&gt;While it was in, the build ledger tooling learned to scan &lt;code&gt;~/git&lt;/code&gt; for new project repos on its own, instead of waiting to be told about them by name.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
