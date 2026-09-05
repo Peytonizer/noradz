@@ -1,32 +1,32 @@
 {
-  "generated": "2026-09-03T11:29:47+00:00",
+  "generated": "2026-09-05T09:30:04+00:00",
   "notes": [
     "Costs are the API-equivalent list price of the tokens used. On a subscription plan that is not the amount actually paid.",
     "Sessions counted in estimated_cost_sessions predate Claude Code recording its own cost; those figures are priced from token counts by this script."
   ],
   "totals": {
-    "projects": 6,
-    "sessions": 49,
-    "human_turns": 325,
-    "cost_usd": 445.41,
-    "lines_added": 33968,
-    "lines_removed": 3374
+    "projects": 8,
+    "sessions": 56,
+    "human_turns": 353,
+    "cost_usd": 622.66,
+    "lines_added": 38055,
+    "lines_removed": 3745
   },
   "projects": [
     {
       "slug": "noradz",
       "name": "Noradz",
-      "sessions": 7,
-      "human_turns": 56,
-      "cost_usd": 30.92,
+      "sessions": 8,
+      "human_turns": 57,
+      "cost_usd": 31.36,
       "estimated_cost_sessions": 1,
       "tokens": {
-        "input": 18736,
-        "output": 341939,
-        "cache_read": 76922787,
-        "cache_creation": 1650303
+        "input": 21734,
+        "output": 343290,
+        "cache_read": 78638002,
+        "cache_creation": 1671361
       },
-      "lines_added": 2282,
+      "lines_added": 2666,
       "lines_removed": 227,
       "models": [
         "claude-haiku-4-5-20251001",
@@ -34,7 +34,7 @@
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-28T11:37:34.005Z",
-      "last_session": "2026-09-03T11:29:42.397Z",
+      "last_session": "2026-09-05T09:30:00.294Z",
       "unpriced_models": []
     },
     {
@@ -89,17 +89,17 @@
     {
       "slug": "aristaeus",
       "name": "Aristaeus",
-      "sessions": 24,
-      "human_turns": 176,
-      "cost_usd": 309.3,
-      "estimated_cost_sessions": 4,
+      "sessions": 25,
+      "human_turns": 183,
+      "cost_usd": 312.96,
+      "estimated_cost_sessions": 3,
       "tokens": {
-        "input": 241758,
-        "output": 2523235,
-        "cache_read": 814295433,
-        "cache_creation": 7385112
+        "input": 245796,
+        "output": 2556089,
+        "cache_read": 818220453,
+        "cache_creation": 7491934
       },
-      "lines_added": 20980,
+      "lines_added": 21331,
       "lines_removed": 1948,
       "models": [
         "claude-haiku-4-5-20251001",
@@ -107,7 +107,7 @@
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-25T08:27:09.442Z",
-      "last_session": "2026-09-03T11:26:12.626Z",
+      "last_session": "2026-09-03T12:10:14.761Z",
       "unpriced_models": []
     },
     {
@@ -157,6 +157,57 @@
       ],
       "first_session": "2026-09-02T22:35:20.899Z",
       "last_session": "2026-09-03T09:07:28.764Z",
+      "unpriced_models": []
+    },
+    {
+      "slug": "former",
+      "name": "former",
+      "sessions": 2,
+      "human_turns": 10,
+      "cost_usd": 116.63,
+      "estimated_cost_sessions": 1,
+      "tokens": {
+        "input": 8163,
+        "output": 702109,
+        "cache_read": 486632681,
+        "cache_creation": 2246518
+      },
+      "lines_added": 3315,
+      "lines_removed": 369,
+      "models": [
+        "<synthetic>",
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5",
+        "claude-sonnet-5"
+      ],
+      "first_session": "2026-09-05T00:56:04.758Z",
+      "last_session": "2026-09-05T07:27:15.448Z",
+      "unpriced_models": [
+        "<synthetic>"
+      ]
+    },
+    {
+      "slug": "lodger",
+      "name": "lodger",
+      "sessions": 3,
+      "human_turns": 10,
+      "cost_usd": 56.52,
+      "estimated_cost_sessions": 1,
+      "tokens": {
+        "input": 6563,
+        "output": 274391,
+        "cache_read": 88033258,
+        "cache_creation": 605935
+      },
+      "lines_added": 37,
+      "lines_removed": 2,
+      "models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5",
+        "claude-sonnet-5"
+      ],
+      "first_session": "2026-09-04T10:34:54.843Z",
+      "last_session": "2026-09-05T09:16:35.040Z",
       "unpriced_models": []
     }
   ]

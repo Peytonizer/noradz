@@ -42,6 +42,16 @@
       "slug": "scrubber",
       "name": "Scrubber",
       "repo_paths": ["~/git/scrubber"]
+    },
+    {
+      "slug": "former",
+      "name": "former",
+      "repo_paths": ["~/git/former"]
+    },
+    {
+      "slug": "lodger",
+      "name": "lodger",
+      "repo_paths": ["~/git/lodger"]
     }
   ]
 }
