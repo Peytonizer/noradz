@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-09
+
+- Added lodger, former, noshow and Blackout to the build ledger and gave each a
+  project card on the front page; added strata-kit to the ledger only — it's
+  shared identity/nav infrastructure with no site of its own to link to, so it
+  gets no card.
+
 ## 2026-09-03 (3)
 
 - Fixed low-contrast text tokens: `--text-faint` (3.7:1 against `--bg`) and

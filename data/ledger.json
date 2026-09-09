@@ -1,32 +1,32 @@
 {
-  "generated": "2026-09-05T09:30:04+00:00",
+  "generated": "2026-09-09T09:39:22+00:00",
   "notes": [
     "Costs are the API-equivalent list price of the tokens used. On a subscription plan that is not the amount actually paid.",
     "Sessions counted in estimated_cost_sessions predate Claude Code recording its own cost; those figures are priced from token counts by this script."
   ],
   "totals": {
-    "projects": 8,
-    "sessions": 56,
-    "human_turns": 353,
-    "cost_usd": 622.66,
-    "lines_added": 38055,
-    "lines_removed": 3745
+    "projects": 11,
+    "sessions": 69,
+    "human_turns": 421,
+    "cost_usd": 781.7,
+    "lines_added": 48839,
+    "lines_removed": 4617
   },
   "projects": [
     {
       "slug": "noradz",
       "name": "Noradz",
-      "sessions": 8,
-      "human_turns": 57,
-      "cost_usd": 31.36,
+      "sessions": 9,
+      "human_turns": 58,
+      "cost_usd": 31.73,
       "estimated_cost_sessions": 1,
       "tokens": {
-        "input": 21734,
-        "output": 343290,
-        "cache_read": 78638002,
-        "cache_creation": 1671361
+        "input": 23654,
+        "output": 348699,
+        "cache_read": 79508894,
+        "cache_creation": 1706145
       },
-      "lines_added": 2666,
+      "lines_added": 2681,
       "lines_removed": 227,
       "models": [
         "claude-haiku-4-5-20251001",
@@ -34,7 +34,7 @@
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-28T11:37:34.005Z",
-      "last_session": "2026-09-05T09:30:00.294Z",
+      "last_session": "2026-09-09T09:39:15.719Z",
       "unpriced_models": []
     },
     {
@@ -64,18 +64,18 @@
     {
       "slug": "strata-bot",
       "name": "Strata Bot",
-      "sessions": 4,
-      "human_turns": 21,
-      "cost_usd": 18.88,
+      "sessions": 5,
+      "human_turns": 22,
+      "cost_usd": 19.45,
       "estimated_cost_sessions": 0,
       "tokens": {
-        "input": 178773,
-        "output": 265161,
-        "cache_read": 34501271,
-        "cache_creation": 1120376
+        "input": 181253,
+        "output": 274700,
+        "cache_read": 36140092,
+        "cache_creation": 1155854
       },
-      "lines_added": 1225,
-      "lines_removed": 73,
+      "lines_added": 1238,
+      "lines_removed": 84,
       "models": [
         "<synthetic>",
         "claude-haiku-4-5-20251001",
@@ -83,21 +83,21 @@
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-27T10:51:22.255Z",
-      "last_session": "2026-09-02T00:37:17.309Z",
+      "last_session": "2026-09-07T22:12:49.924Z",
       "unpriced_models": []
     },
     {
       "slug": "aristaeus",
       "name": "Aristaeus",
-      "sessions": 25,
-      "human_turns": 183,
-      "cost_usd": 312.96,
-      "estimated_cost_sessions": 3,
+      "sessions": 26,
+      "human_turns": 191,
+      "cost_usd": 320.68,
+      "estimated_cost_sessions": 4,
       "tokens": {
-        "input": 245796,
-        "output": 2556089,
-        "cache_read": 818220453,
-        "cache_creation": 7491934
+        "input": 245994,
+        "output": 2602884,
+        "cache_read": 828809711,
+        "cache_creation": 7616828
       },
       "lines_added": 21331,
       "lines_removed": 1948,
@@ -107,7 +107,7 @@
         "claude-sonnet-5"
       ],
       "first_session": "2026-08-25T08:27:09.442Z",
-      "last_session": "2026-09-03T12:10:14.761Z",
+      "last_session": "2026-09-09T09:20:42.842Z",
       "unpriced_models": []
     },
     {
@@ -162,18 +162,18 @@
     {
       "slug": "former",
       "name": "former",
-      "sessions": 2,
-      "human_turns": 10,
-      "cost_usd": 116.63,
-      "estimated_cost_sessions": 1,
+      "sessions": 3,
+      "human_turns": 23,
+      "cost_usd": 129.72,
+      "estimated_cost_sessions": 0,
       "tokens": {
-        "input": 8163,
-        "output": 702109,
-        "cache_read": 486632681,
-        "cache_creation": 2246518
+        "input": 38642,
+        "output": 838608,
+        "cache_read": 533181146,
+        "cache_creation": 2837369
       },
-      "lines_added": 3315,
-      "lines_removed": 369,
+      "lines_added": 7541,
+      "lines_removed": 627,
       "models": [
         "<synthetic>",
         "claude-haiku-4-5-20251001",
@@ -181,33 +181,102 @@
         "claude-sonnet-5"
       ],
       "first_session": "2026-09-05T00:56:04.758Z",
-      "last_session": "2026-09-05T07:27:15.448Z",
-      "unpriced_models": [
-        "<synthetic>"
-      ]
+      "last_session": "2026-09-05T11:03:47.844Z",
+      "unpriced_models": []
     },
     {
       "slug": "lodger",
       "name": "lodger",
-      "sessions": 3,
-      "human_turns": 10,
-      "cost_usd": 56.52,
-      "estimated_cost_sessions": 1,
+      "sessions": 4,
+      "human_turns": 11,
+      "cost_usd": 56.99,
+      "estimated_cost_sessions": 0,
       "tokens": {
-        "input": 6563,
-        "output": 274391,
-        "cache_read": 88033258,
-        "cache_creation": 605935
+        "input": 10505,
+        "output": 279129,
+        "cache_read": 89229832,
+        "cache_creation": 649710
       },
-      "lines_added": 37,
-      "lines_removed": 2,
+      "lines_added": 46,
+      "lines_removed": 3,
       "models": [
         "claude-haiku-4-5-20251001",
         "claude-opus-5",
         "claude-sonnet-5"
       ],
       "first_session": "2026-09-04T10:34:54.843Z",
-      "last_session": "2026-09-05T09:16:35.040Z",
+      "last_session": "2026-09-05T11:03:26.908Z",
+      "unpriced_models": []
+    },
+    {
+      "slug": "blackout",
+      "name": "Blackout",
+      "sessions": 4,
+      "human_turns": 19,
+      "cost_usd": 86.6,
+      "estimated_cost_sessions": 0,
+      "tokens": {
+        "input": 9194,
+        "output": 624113,
+        "cache_read": 365911933,
+        "cache_creation": 1451313
+      },
+      "lines_added": 3663,
+      "lines_removed": 423,
+      "models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5",
+        "claude-sonnet-5"
+      ],
+      "first_session": "2026-09-08T10:15:26.756Z",
+      "last_session": "2026-09-09T04:23:33.489Z",
+      "unpriced_models": []
+    },
+    {
+      "slug": "noshow",
+      "name": "noshow",
+      "sessions": 2,
+      "human_turns": 17,
+      "cost_usd": 47.26,
+      "estimated_cost_sessions": 0,
+      "tokens": {
+        "input": 9212,
+        "output": 334500,
+        "cache_read": 142374557,
+        "cache_creation": 959795
+      },
+      "lines_added": 2788,
+      "lines_removed": 136,
+      "models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5",
+        "claude-sonnet-5"
+      ],
+      "first_session": "2026-09-07T10:12:17.312Z",
+      "last_session": "2026-09-07T12:53:52.542Z",
+      "unpriced_models": []
+    },
+    {
+      "slug": "strata-kit",
+      "name": "strata-kit",
+      "sessions": 2,
+      "human_turns": 8,
+      "cost_usd": 2.96,
+      "estimated_cost_sessions": 0,
+      "tokens": {
+        "input": 5026,
+        "output": 47014,
+        "cache_read": 8576975,
+        "cache_creation": 192728
+      },
+      "lines_added": 70,
+      "lines_removed": 43,
+      "models": [
+        "claude-haiku-4-5-20251001",
+        "claude-sonnet-5"
+      ],
+      "first_session": "2026-09-05T10:17:04.050Z",
+      "last_session": "2026-09-06T08:27:36.375Z",
       "unpriced_models": []
     }
   ]

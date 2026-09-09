@@ -52,6 +52,21 @@
       "slug": "lodger",
       "name": "lodger",
       "repo_paths": ["~/git/lodger"]
+    },
+    {
+      "slug": "blackout",
+      "name": "Blackout",
+      "repo_paths": ["~/git/blackout"]
+    },
+    {
+      "slug": "noshow",
+      "name": "noshow",
+      "repo_paths": ["~/git/noshow"]
+    },
+    {
+      "slug": "strata-kit",
+      "name": "strata-kit",
+      "repo_paths": ["~/git/strata-kit"]
     }
   ]
 }
