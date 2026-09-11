@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-11
+
+- Added Proteus to the build ledger and gave it a project card (private repo,
+  no live site yet — it's destined for the NUC, not deployed there).
+
 ## 2026-09-09
 
 - Added lodger, former, noshow and Blackout to the build ledger and gave each a

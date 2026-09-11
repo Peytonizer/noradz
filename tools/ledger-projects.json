@@ -67,6 +67,11 @@
       "slug": "strata-kit",
       "name": "strata-kit",
       "repo_paths": ["~/git/strata-kit"]
+    },
+    {
+      "slug": "proteus",
+      "name": "Proteus",
+      "repo_paths": ["~/git/proteus"]
     }
   ]
 }
