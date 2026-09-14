@@ -587,6 +587,53 @@ a {
   margin-bottom: 0;
 }
 
+/* ---------- Privacy ---------- */
+
+.policy {
+  padding: 56px 72px 100px;
+}
+
+.policy-updated {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-faintest);
+  margin: 0 0 32px;
+}
+
+.policy-body {
+  font-size: 15px;
+  color: var(--text-dim);
+  max-width: 640px;
+}
+
+.policy-body h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 32px 0 12px;
+}
+
+.policy-body h2:first-child {
+  margin-top: 0;
+}
+
+.policy-body p {
+  margin: 0 0 16px;
+}
+
+.policy-body p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-body code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -605,6 +652,17 @@ a {
   margin: 0;
 }
 
+.footer-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-faintest);
+}
+
+.footer-link:hover {
+  color: var(--accent-text);
+}
+
 /* ---------- Responsive ----------
    Not covered by the spec (1440px desktop only) — breakpoints below
    are a build-time decision, chosen to keep the same visual rhythm
@@ -618,6 +676,7 @@ a {
   .ledger,
   .log,
   .now,
+  .policy,
   .site-footer {
     padding-left: 32px;
     padding-right: 32px;

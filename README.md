@@ -15,6 +15,7 @@ index.html               homepage markup
 log.html                 /log — dated short entries (see below)
 ledger.html              /ledger — sitewide build ledger totals + table (see below)
 now.html                 /now — what's being built this month, hand-edited
+privacy.html             /privacy — plain-language privacy policy for the tools listed here
 css/style.css            all styling (colour tokens, type, layout, responsive rules)
 js/ledger.js             fetches data/ledger.json and renders the build ledger (see below)
 js/log.js                fetches data/log.json and renders the log entries (see below)
@@ -89,6 +90,16 @@ the same local-script-then-commit pattern as the build ledger.
 
 `/now` (`now.html`) is a single hand-edited page — what's being built this month,
 updated when it changes and left stale-with-a-date otherwise. No data file, no script.
+
+## Privacy policy
+
+`/privacy` (`privacy.html`) is a plain-language privacy policy, hand-written, no data file.
+It exists because Proteus's Google Drive backup client needs one published on a verified
+domain before Google will move its OAuth consent screen out of "Testing" (which expires
+grants after seven days). Linked from the footer on every page rather than the nav, since
+it's a compliance page, not part of the site's argument. If the site restructures around
+per-project pages, this path needs to keep working or leave a redirect behind — it's a URL
+Google's own OAuth screen points at.
 
 ## Run locally
 

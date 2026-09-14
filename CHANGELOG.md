@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-09-14
+
+- Added `/privacy` (`privacy.html`) — a plain-language privacy policy, linked from the
+  footer on every page. Needed because Proteus's Google Drive backup client requires a
+  published policy on a verified domain before Google will move its OAuth consent screen
+  out of "Testing" (a seven-day grant expiry otherwise). Written for the tools themselves
+  rather than boilerplate: explains the Drive backup's `drive.file` scope (it only ever
+  sees files it created), that it copies one household's own files to that household's own
+  Drive account, and that no contact address is published because nothing here collects
+  data from anyone but the operator. Says nothing about where anything is hosted.
+
 ## 2026-09-11
 
 - Added Proteus to the build ledger and gave it a project card (private repo,
