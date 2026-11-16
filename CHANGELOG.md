@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-16
+
+- Added a card for stencil (11 · tool), the strata notice generator, which had been live since
+  September without one. The build ledger picks up its figures on its next run.
+- `/now` updated: release tidy-up under way, security tooling next.
+
 ## 2026-09-14
 
 - Added `/privacy` (`privacy.html`) — a plain-language privacy policy, linked from the
