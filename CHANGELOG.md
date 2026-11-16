@@ -4,7 +4,7 @@
 
 - Added a card for stencil (11 · tool), the strata notice generator, which had been live since
   September without one. The build ledger picks up its figures on its next run.
-- `/now` updated: release tidy-up under way, security tooling next.
+- `/now` updated: release tidy-up done, security tooling next.
 
 ## 2026-09-14
 
